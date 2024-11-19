@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/23"
+      fx:controller="com.testapi.Api">
+   <Label />
+  <Label fx:id="" prefHeight="18.0" prefWidth="66.0" text="Nhập ISBM" />
+  <TextField fx:id="searchField" prefHeight="26.0" prefWidth="437.0" promptText="Enter ISBN or Title" />
+  <Button onAction="#handleSearch" text="Search" />
+   <Label prefHeight="18.0" prefWidth="78.0" text="Thông tin sách" />
+  <TextArea fx:id="resultArea" editable="false" prefRowCount="10" wrapText="true" />
+</VBox>

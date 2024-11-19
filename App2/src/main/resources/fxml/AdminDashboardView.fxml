@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane style="-fx-background-color: #e0f7fa;"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.view.gui.AdminDashboardController">
+
+    <top>
+        <VBox alignment="CENTER" style="-fx-padding: 20;">
+            <ImageView fitHeight="70" fitWidth="70" preserveRatio="true">
+                <Image url="@../images/admin_icon.png"/>
+            </ImageView>
+            <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #1565c0;"
+                   text="Admin Dashboard"/>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true">
+            <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+                <GridPane alignment="CENTER" hgap="20" vgap="20">
+                    <!-- User Management Buttons -->
+                    <Button fx:id="addUserButton"
+                            onAction="#handleAddUserAction"
+                            style="-fx-background-color: #1565c0; -fx-text-fill: white;
+                                   -fx-font-size: 15px; -fx-pref-width: 200px; -fx-pref-height: 50px;
+                                   -fx-background-radius: 10;"
+                            text="Add User" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Button fx:id="viewAllUserButton"
+                            onAction="#handleViewAllUsersAction"
+                            style="-fx-background-color: #1565c0; -fx-text-fill: white;
+                                   -fx-font-size: 15px; -fx-pref-width: 200px; -fx-pref-height: 50px;
+                                   -fx-background-radius: 10;"
+                            text="View All Users" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                    <!-- Document Management Buttons -->
+                    <Button fx:id="addDocumentButton"
+                            onAction="#handleAddDocumentAction"
+                            style="-fx-background-color: #1565c0; -fx-text-fill: white;
+                             -fx-font-size: 15px; -fx-pref-width: 200px; -fx-pref-height: 50px;
+                              -fx-background-radius: 10;"
+                            text="Add Document" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <Button fx:id="removeDocumentButton"
+                            onAction="#handleRemoveDocumentAction"
+                            style="-fx-background-color: #1565c0; -fx-text-fill: white;
+                             -fx-font-size: 15px; -fx-pref-width: 200px; -fx-pref-height: 50px;
+                              -fx-background-radius: 10;"
+                            text="Remove Document" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <Button fx:id="updateDocumentButton"
+                            onAction="#handleUpdateDocumentAction"
+                            style="-fx-background-color: #1565c0; -fx-text-fill: white;
+                             -fx-font-size: 15px; -fx-pref-width: 200px; -fx-pref-height: 50px;
+                              -fx-background-radius: 10;"
+                            text="Update Document" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <Button fx:id="findDocumentButton"
+                            onAction="#handleFindDocumentAction"
+                            style="-fx-background-color: #1565c0; -fx-text-fill: white;
+                             -fx-font-size: 15px; -fx-pref-width: 200px; -fx-pref-height: 50px;
+                              -fx-background-radius: 10;"
+                            text="Find Document" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <Button fx:id="viewAllDocumentButton"
+                            onAction="#handleViewAllDocumentsAction"
+                            style="-fx-background-color: #1565c0; -fx-text-fill: white;
+                             -fx-font-size: 15px; -fx-pref-width: 200px; -fx-pref-height: 50px;
+                              -fx-background-radius: 10;"
+                            text="View All Documents" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+                    <!-- Document Borrowing Buttons -->
+                    <Button fx:id="borrowDocumentButton"
+                            onAction="#handleBorrowDocumentAction"
+                            style="-fx-background-color: #1565c0; -fx-text-fill: white;
+                             -fx-font-size: 15px; -fx-pref-width: 200px; -fx-pref-height: 50px;
+                              -fx-background-radius: 10;"
+                            text="Borrow Document" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                    <Button fx:id="returnDocumentButton"
+                            onAction="#handleReturnDocumentAction"
+                            style="-fx-background-color: #1565c0; -fx-text-fill: white;
+                             -fx-font-size: 15px; -fx-pref-width: 200px; -fx-pref-height: 50px;
+                              -fx-background-radius: 10;"
+                            text="Return Document" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                </GridPane>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 20;">
+            <Button text="Back" fx:id="backButton"
+                    onAction="#handleBackAction"
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white;
+                     -fx-font-weight: bold; -fx-pref-width: 100px; -fx-pref-height: 40px;
+                      -fx-background-radius: 10; -fx-cursor: hand;"/>
+            <Label text="© Team 2 Library Management System"
+                   style="-fx-font-size: 12px; -fx-text-fill: #1565c0; -fx-padding: 0 0 0 300px;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

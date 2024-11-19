@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="controller.UserController"
+          alignment="CENTER"
+          hgap="10" vgap="10"
+          style="-fx-background-color: white;">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="All User"
+           GridPane.rowIndex="0"
+           GridPane.columnSpan="2"
+           style="-fx-font-size: 24px; -fx-text-fill: #007acc;
+            -fx-font-weight: bold; -fx-alignment: center;"/>
+
+    <!-- Button Section -->
+    <HBox GridPane.rowIndex="6" GridPane.columnSpan="4"
+          spacing="10" alignment="CENTER">
+        <Button text="View All Document"
+                GridPane.columnIndex="1"
+                style="-fx-background-color: #007acc; -fx-text-fill: white;
+                 -fx-font-size: 12px; -fx-padding: 10px 20px; -fx-background-radius: 5px;"
+                onAction="#handleGetAllUserAction"/>
+
+        <Button text="Back"
+                GridPane.columnIndex="2"
+                style="-fx-background-color: red; -fx-text-fill: white;
+                 -fx-font-size: 12px; -fx-padding: 10px 20px; -fx-background-radius: 5px;"
+                onAction="#handleBackAdminAction"/>
+    </HBox>
+
+    <!-- ListView to Display All User -->
+    <Label text="Users:"
+           GridPane.rowIndex="2"
+           GridPane.columnIndex="0"
+           style="-fx-font-size: 14px; -fx-text-fill: #007acc;"/>
+    <ListView fx:id="userListView"
+              GridPane.rowIndex="2"
+              GridPane.columnIndex="1"
+              style="-fx-background-color: #f0f8ff; -fx-border-color: #007acc;
+               -fx-border-radius: 5px; -fx-padding: 5px; -fx-pref-height: 300px;"/>
+</GridPane>

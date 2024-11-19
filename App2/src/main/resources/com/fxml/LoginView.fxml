@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="view.gui.LoginController"
+           style="-fx-background-color: linear-gradient(to bottom right, #2193b0, #6dd5ed);">
+
+    <VBox alignment="CENTER" spacing="20"
+          style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 10;"
+          maxWidth="400" maxHeight="600">
+
+        <!-- Header Section -->
+        <VBox alignment="CENTER" spacing="10">
+            <Text text="Welcome to Library Management System"
+                  style="-fx-font-size: 23px; -fx-font-weight: bold; -fx-fill: #2c3e50;"/>
+            <Text text="Please login to continue"
+                  style="-fx-font-size: 14px; -fx-fill: #7f8c8d;"/>
+        </VBox>
+
+        <!-- Login Form -->
+        <TabPane style="-fx-background-color: transparent;" tabClosingPolicy="UNAVAILABLE">
+            <Tab text="User Login">
+                <VBox spacing="15" style="-fx-padding: 20;">
+                    <TextField fx:id="userEmailField"
+                               promptText="Email Address"
+                               style="-fx-background-radius: 5; -fx-border-radius: 5;
+                                -fx-border-color: #e0e0e0; -fx-padding: 10;"/>
+
+                    <PasswordField fx:id="userPasswordField"
+                                   promptText="Password"
+                                   style="-fx-background-radius: 5; -fx-border-radius: 5;
+                                    -fx-border-color: #e0e0e0; -fx-padding: 10;"/>
+
+                    <Button text="LOGIN"
+                            onAction="#handleUserLoginAction"
+                            style="-fx-background-color: #2193b0; -fx-text-fill: white;
+                             -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5;"
+                            maxWidth="Infinity"/>
+
+                    <Hyperlink text="Forgot password?"
+                               style="-fx-text-fill: #2193b0;"
+                               alignment="CENTER"/>
+
+                    <Label fx:id="userLoginStatusLabel"
+                           style="-fx-text-fill: #e74c3c;"/>
+                </VBox>
+            </Tab>
+
+            <Tab text="Admin Login">
+                <VBox spacing="15" style="-fx-padding: 20;">
+                    <TextField fx:id="adminEmailField"
+                               promptText="Email Address"
+                               style="-fx-background-radius: 5; -fx-border-radius: 5;
+                                -fx-border-color: #e0e0e0; -fx-padding: 10;"/>
+
+                    <PasswordField fx:id="adminPasswordField"
+                                   promptText="Password"
+                                   style="-fx-background-radius: 5; -fx-border-radius: 5;
+                                    -fx-border-color: #e0e0e0; -fx-padding: 10;"/>
+
+                    <Button text="LOGIN"
+                            onAction="#handleAdminLoginAction"
+                            style="-fx-background-color: #2193b0; -fx-text-fill: white;
+                             -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5;"
+                            maxWidth="Infinity"/>
+
+                    <Label fx:id="adminLoginStatusLabel"
+                           style="-fx-text-fill: #e74c3c;"/>
+                </VBox>
+            </Tab>
+        </TabPane>
+
+        <!-- Register Section -->
+        <HBox alignment="CENTER" spacing="10">
+            <Text text="Don't have an account?"
+                  style="-fx-fill: #7f8c8d;"/>
+            <Button text="Register Now"
+                    onAction="#handleUserRegisterAction"
+                    style="-fx-background-color: transparent; -fx-text-fill: #2193b0;
+                     -fx-font-weight: bold; -fx-underline: true;"/>
+        </HBox>
+
+    </VBox>
+</StackPane>
